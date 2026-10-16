@@ -86,7 +86,7 @@ for wifi_ch, freq_mhz in wifi_channels:
     nrf_channel = freq_mhz - 2400
     result = rpd_scan(nrf_channel, samples=200)
     bar = "#" * result
-    print("WiFi ch{} ({}MHz / NRF ch{:3d}): [{:<100}] {}/100".format(
+    print("WiFi ch{} ({}MHz / NRF ch{:3d}): [{:<100}] {}/200".format(
         wifi_ch, freq_mhz, nrf_channel, bar, result))
 
 print()
@@ -113,5 +113,5 @@ for ch in range(126):
             ch, freq, bar, results[ch]))
 
 print()
-print("Peak: Ch{} ({}MHz) = {}/30".format(
+print("Peak: Ch{} ({}MHz) = {}/100".format(
     peak_ch, peak_freq, results[peak_ch]))
