@@ -1,8 +1,6 @@
 # 2.4 GHz RF Activity Monitor
 
-A Raspberry Pi Pico H project using an nRF24L01+ module to detect RF activity across 126 channel centres from 2400 to 2525 MHz.
-
-The project combines **MicroPython hardware control** with **MATLAB visualisation of recorded data**.
+A Raspberry Pi Pico H project using an nRF24L01+ module to detect RF activity across 126 channel centres from 2400 to 2525 MHz. An OLED display shows scanning results on the device, while MATLAB visualises recorded activity over time.
 
 ## Features
 
@@ -11,6 +9,7 @@ The project combines **MicroPython hardware control** with **MATLAB visualisatio
 - Display detection counts in the serial terminal
 - Identify the channel with the highest detection count
 - Visualise existing binary recordings in MATLAB as a 3D surface plot
+- Show RF channel activity on an OLED display
 
 RPD is a threshold detector, not a calibrated signal-strength measurement. Detections may come from different RF sources; the application does not identify Wi-Fi networks or decode their traffic.
 
@@ -29,6 +28,7 @@ The MicroPython scanner also requires a compatible `nrf24l01.py` driver on the P
 - nRF24L01+ radio module
 - Breadboard and jumper wires
 - 100 µF capacitor across the radio supply
+- OLED display
 
 ### SPI Wiring
 
